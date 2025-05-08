@@ -4,28 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - OrgFinder</title>
+    <title>OrgFinder - Home</title>
     <link rel="stylesheet" href="{% static 'base/styles.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        body#home-page {
             background-color: #1e1e1e;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
         }
 
-        header {
+        #home-page header {
             background-color: #2c2c2c;
             padding: 20px;
             border-radius: 0 0 10px 10px;
-            text-align: center;
         }
 
-        header h1 {
+        #home-page header h1 {
             margin-bottom: 15px;
         }
 
-        nav {
+        #home-page nav {
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -49,18 +48,18 @@
             background-color: #43a047;
         }
 
-        .home-btn {
+        .login-btn {
             background-color: #2196f3;
             color: #fff;
         }
 
-        .home-btn:hover {
+        .login-btn:hover {
             background-color: #1976d2;
         }
 
-        main {
+        #home-page main {
             background-color: #2e2e2e;
-            max-width: 600px;
+            max-width: 750px;
             margin: 40px auto;
             padding: 30px;
             border-radius: 10px;
@@ -68,60 +67,57 @@
             text-align: center;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        #home-page h2 {
+            color: #90ee90;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
 
-        button {
-            padding: 12px;
+        #home-page p {
+            color: #dddddd;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .event-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
             background-color: #90ee90;
             color: #1e1e1e;
+            font-weight: bold;
             border: none;
             border-radius: 8px;
-            font-weight: bold;
             font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
         }
 
-        button:hover {
+        .event-btn:hover {
             background-color: #76d976;
-        }
-
-        .error-messages {
-            margin-top: 15px;
-            color: #ff4d4d;
-            text-align: left;
         }
     </style>
 </head>
-<body>
+
+<body id="home-page">
     <div class="container">
         <header>
-            <h1>Login to <span style="color: #90ee90;">OrgFinder</span></h1>
+            <h1>Welcome to <span style="color: #90ee90;">OrgFinder</span></h1>
             <nav>
                 <a href="{% url 'signup' %}" class="nav-button signup-btn">Sign Up</a>
-                <a href="{% url 'home' %}" class="nav-button home-btn">Home</a>
+                <a href="{% url 'login' %}" class="nav-button login-btn">Login</a>
             </nav>
         </header>
+
         <main>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Log In</button>
-            </form>
-            {% if form.errors %}
-                <div class="error-messages">
-                    <ul>
-                        {% for field in form %}
-                            {% for error in field.errors %}
-                                <li>{{ error }}</li>
-                            {% endfor %}
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
+            <h2>Your Gateway to Campus Organizations</h2>
+            <p>
+                Whether you're looking to join a club, start an event, or simply explore, OrgFinder is your centralized hub. 
+                Sign up or log in to discover and create events with ease.
+            </p>
+
+            <a href="{% url 'create_event' %}" class="event-btn">Create an Event</a>
         </main>
     </div>
 </body>

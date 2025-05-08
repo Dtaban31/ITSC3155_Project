@@ -94,7 +94,7 @@ form {
 
 #new_event_page button {
     display: block;
-    margin: 20px auto 0;
+    margin: 20px auto 0;a
     background-color: #4b0082;
     color: white;
     border: none;
@@ -158,21 +158,3 @@ form {
     margin-top: 0;
     margin-bottom: 20px;
 }
-
-#home-page .home-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #228B22;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#home-page .home-button:hover {
-    background-color: #006400;
-}
-
-

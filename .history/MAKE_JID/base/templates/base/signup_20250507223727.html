@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - OrgFinder</title>
+    <title>Sign Up - OrgFinder</title>
     <link rel="stylesheet" href="{% static 'base/styles.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -40,22 +40,22 @@
             transition: background-color 0.3s ease;
         }
 
-        .signup-btn {
-            background-color: #4caf50;
-            color: #fff;
-        }
-
-        .signup-btn:hover {
-            background-color: #43a047;
-        }
-
-        .home-btn {
+        .login-btn {
             background-color: #2196f3;
             color: #fff;
         }
 
-        .home-btn:hover {
+        .login-btn:hover {
             background-color: #1976d2;
+        }
+
+        .home-btn {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .home-btn:hover {
+            background-color: #43a047;
         }
 
         main {
@@ -88,20 +88,14 @@
         button:hover {
             background-color: #76d976;
         }
-
-        .error-messages {
-            margin-top: 15px;
-            color: #ff4d4d;
-            text-align: left;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Login to <span style="color: #90ee90;">OrgFinder</span></h1>
+            <h1>Join <span style="color: #90ee90;">OrgFinder</span></h1>
             <nav>
-                <a href="{% url 'signup' %}" class="nav-button signup-btn">Sign Up</a>
+                <a href="{% url 'login' %}" class="nav-button login-btn">Login</a>
                 <a href="{% url 'home' %}" class="nav-button home-btn">Home</a>
             </nav>
         </header>
@@ -109,19 +103,8 @@
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit">Log In</button>
+                <button type="submit">Sign Up</button>
             </form>
-            {% if form.errors %}
-                <div class="error-messages">
-                    <ul>
-                        {% for field in form %}
-                            {% for error in field.errors %}
-                                <li>{{ error }}</li>
-                            {% endfor %}
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
         </main>
     </div>
 </body>

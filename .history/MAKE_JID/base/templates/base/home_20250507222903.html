@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrgFinder - Home</title>
+    <link rel="stylesheet" href="{% static 'base/styles.css' %}">
+</head>
+
+<body id="home-page">
+    <div class="container">
+        <header>
+            <h1>Welcome to <span style="color: #90ee90;">OrgFinder</span></h1>
+            <nav>
+                <a href="{% url 'signup' %}">Sign Up</a>
+                <a href="{% url 'login' %}">Login</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Your Gateway to Campus Organizations</h2>
+            <p style="font-size: 1.1em; line-height: 1.6;">
+                Whether you're looking to join a club, start an event, or simply explore, OrgFinder is your centralized hub. 
+                Sign up or log in to discover and create events with ease.
+            </p>
+
+            <div style="margin-top: 30px;">
+                <a href="{% url 'create_event' %}">
+                    <button style="
+                        background-color: #006400;
+                        color: white;
+                        border: none;
+                        padding: 12px 28px;
+                        border-radius: 8px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                    ">
+                        Create an Event
+                    </button>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

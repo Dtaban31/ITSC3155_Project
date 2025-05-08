@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - MAKE JID</title>
+    <link rel="stylesheet" href="{% static 'base/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body id="home-page">
+    <div class="container">
+        <header>
+            <h1>Welcome to OrgFinder!</h1>
+            <nav>
+                <a href="{% url 'signup' %}">Sign Up</a>
+                <a href="{% url 'login' %}">Login</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Home Page</h2>
+            <p>Welcome to the homepage. From here, you can sign up, log in to your account, or create an event.</p>
+            <a href="{% url 'create_event' %}" class="home-button">Create Event</a>
+        </main>
+    </div>
+</body>
+</html>
