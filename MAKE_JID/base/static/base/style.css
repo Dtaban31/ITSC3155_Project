@@ -42,3 +42,119 @@ form {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
+
+/* ================================
+   Styles for the New Event Page
+   ================================ */
+
+#new_event_page {
+    background-color:#66bb6a;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+#new_event_page header {
+    background-color: #d7ccc8;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+#new_event_page nav a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#new_event_page nav a:hover {
+    text-decoration: underline;
+}
+
+#new_event_page main {
+    max-width: 1000px;
+    margin: 60px auto;
+    background-color: brown;
+    padding: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#new_event_page h2 {
+    color: #4b0082;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#new_event_page button {
+    display: block;
+    margin: 20px auto 0;a
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#new_event_page button:hover {
+    background-color: #36005d;
+}
+
+
+
+
+
+
+/* ===========================
+   Styles for the Home Page
+   =========================== */
+
+#home-page {
+    background-color: #f0fff0; /* light green background */
+    font-family: 'Verdana', sans-serif;
+    color: #222;
+}
+
+#home-page header {
+    background-color: #006400; /* dark green */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+#home-page nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#home-page nav a:hover {
+    text-decoration: underline;
+}
+
+#home-page main {
+    max-width: 750px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#home-page h2 {
+    color: #006400;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}

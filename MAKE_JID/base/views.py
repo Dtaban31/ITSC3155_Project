@@ -34,3 +34,6 @@ def login_view(request):
 
 def create_event(request):
     return render(request, 'base/create_event.html')
+
+def new_event_page_view(request):
+    return render(request, 'base/new_event_page.html')
