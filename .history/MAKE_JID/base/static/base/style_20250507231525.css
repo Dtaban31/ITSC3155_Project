@@ -54,11 +54,11 @@ form {
 #new_event_page {
     background-color:#66bb6a;
     font-family: 'Segoe UI', sans-serif;
-    color: #848484;
+    color: #333;
 }
 
 #new_event_page header {
-    background-color: #3e3e3e;
+    background-color: #d7ccc8;
     color: black;
     padding: 20px;
     text-align: center;
@@ -86,7 +86,7 @@ form {
 }
 
 #new_event_page h2 {
-    color: #00c756;
+    color: #4b0082;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 0px;
